@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Personal Finance Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Personal Finance Management App is a web application designed to help users manage their personal finances. It allows users to track their income and expenses, set financial goals, and visualize their spending with charts. The app uses React.js for the frontend, Firebase for authentication and data storage, and Redux for state management.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Sign up, log in, and manage user accounts using Firebase Authentication.
+- **Dashboard**: View a summary of income, expenses, and savings goals.
+- **Transaction Management**: Add, edit, and delete transactions. Transactions can be categorized as income or expenses.
+- **Budget Planning**: Set and manage budgets and financial goals.
+- **Data Visualization**: View expenses and income using pie charts with Chart.js.
+- **Responsive Design**: Optimized for desktop and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js, Redux, React Router, Tailwind CSS, Chart.js
+- **Backend**: Firebase Authentication, Firebase Firestore for data storage
+- **State Management**: Redux Toolkit
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the app, follow these steps:
 
-### `npm run build`
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/finance-app.git
+    cd finance-app
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Set up Firebase**:
+    - Create a Firebase project in the Firebase Console.
+    - Configure Firebase Authentication and Firestore.
+    - Create a `.env` file in the root directory and add your Firebase configuration:
+      ```env
+      REACT_APP_FIREBASE_API_KEY=your-api-key
+      REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+      REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+      REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+      REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+      REACT_APP_FIREBASE_APP_ID=your-app-id
+      ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Run the app**:
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+    The app will be available at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Sign Up**: Create a new account using the Sign Up page.
+2. **Log In**: Access your account using the Login page.
+3. **Dashboard**: After logging in, you'll be redirected to the Dashboard where you can view your financial summary and manage transactions.
+4. **Manage Transactions**: Add, edit, or delete income and expense transactions.
+5. **Set Goals**: Use the dashboard to set and track your financial goals.
+6. **Log Out**: Click the Log Out button to exit your account.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## File Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **`src/components/`**: Contains reusable components like `Dashboard`, `ChartComponent`.
+- **`src/pages/`**: Contains page components for `LoginPage`, `SignupPage`, `HomePage`.
+- **`src/redux/`**: Contains Redux slices and store configuration.
+- **`src/firebaseConfig.js`**: Firebase configuration and initialization.
+- **`src/App.js`**: Main application component with routing setup.
+- **`src/index.js`**: Entry point of the application.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or fixes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
+If you have any questions or feedback, feel free to reach out:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **GitHub**: [Ajit49](https://github.com/Ajit49)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
